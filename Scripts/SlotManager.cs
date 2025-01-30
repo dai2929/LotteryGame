@@ -10,7 +10,7 @@ public class SlotManager : MonoBehaviour
     public float spinSpeed = 1000.0f;
     public float stopDelay = 0.5f;
     public int localResultIndex = 0;    //(仮)最終的にコメントアウト予定
-    bool[] isPersonSpinning = {false,false,false};
+    bool[] isPersonSpinning = { false, false, false };
     public OptionData optionData;
 
     void Update()
@@ -21,13 +21,13 @@ public class SlotManager : MonoBehaviour
             {
                 if (isPersonSpinning[i] == true)
                 {
-                    reels[i].transform.Rotate(-spinSpeed * Time.deltaTime,0,0);
+                    reels[i].transform.Rotate(-spinSpeed * Time.deltaTime, 0, 0);
                 }
             }
         }
     }
 
-    void StartSlot()
+    public void StartSlot()
     {
         if (GameManager.isSpinning == false)
         {
@@ -39,15 +39,15 @@ public class SlotManager : MonoBehaviour
                 isPersonSpinning[i] = true;
             }
 
-        StartCoroutine: StopReelsSequentially();
+            StartCoroutine(StopReelsSequentially());
         }
     }
 
     //StartSlotメソッドまで作成できたらコメントアウトを解除
-     IEnumerator StopReelsSequentially()
+    IEnumerator StopReelsSequentially()
     {
         yield return new WaitForSeconds(3.0f);
-        yield return new WaitUntil(() => GameManager.isResult);
+        //yield return new WaitUntil(() => GameManager.isResult);
 
         for (int i = 0; i < reels.Length; i++)
         {
@@ -71,7 +71,7 @@ public class SlotManager : MonoBehaviour
     }
 
     //StartSlotメソッドまで作成できたらコメントアウトを解除
-     IEnumerator SlowStop(GameObject reel, float targetAngle)
+    IEnumerator SlowStop(GameObject reel, float targetAngle)
     {
         float currentAngle = reel.transform.rotation.eulerAngles.x;
         float difference = Mathf.DeltaAngle(currentAngle, targetAngle);

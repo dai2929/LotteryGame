@@ -376,6 +376,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -7.39, y: 0, z: 0}
+--- !u!114 &1595199177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 639990050264395400, guid: 5d7b929875f04c04dbd825403da1432a, type: 3}
+  m_PrefabInstance: {fileID: 837980471413965611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a4ba3d37a698945a6fe6595e2c59e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &123707664655401866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,6 +471,10 @@ PrefabInstance:
       propertyPath: optionData
       value: 
       objectReference: {fileID: 11400000, guid: c7c3438237e8a1d4188cb9f973c2d201, type: 2}
+    - target: {fileID: 639990050264395400, guid: 5d7b929875f04c04dbd825403da1432a, type: 3}
+      propertyPath: localResultIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 639990050264395400, guid: 5d7b929875f04c04dbd825403da1432a, type: 3}
       propertyPath: reels.Array.size
       value: 3
@@ -605,10 +620,22 @@ PrefabInstance:
     - target: {fileID: 30229306362857137, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 80a4ba3d37a698945a6fe6595e2c59e5, type: 3}
+      objectReference: {fileID: 1595199177}
     - target: {fileID: 30229306362857137, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 30229306362857137, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 30229306362857137, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SlotManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 30229306362857137, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 951547741629916977, guid: 1182fc432f79f704f99631e0c02158bb, type: 3}
       propertyPath: m_AnchorMax.x
